@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2> creating a javascript object</h2>
+<ol>
+    <li>Using Object Literal</li>
+    <p id="demo"></p>
+    <li>Using New Keyword</li>
+    <p id="demo1"></p>
+    <li>Javascript Object Are Mutable</li>
+    <p id="demo2"></p>
+</ol>
+<script>
+    var person={firstName:"john", lastName:"Doe", age:40};
+
+    document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " year old. ";
+
+    var person1 = new Object();
+    person1.firstName = "John";
+    person1.lastName = "Marshal"
+    person1.age = 45;
+
+    document.getElementById("demo1").innerHTML = person1.firstName + " is "+ person1.age + " year old. ";
+
+    var x = person;
+    x.age = 10;
+    document.getElementById("demo2").innerHTML = person.firstName + " is " + person.age + " year old. ";
+
+</script>
+</body>
+</html>
