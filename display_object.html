@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2> Different Methods Of Object Display</h2>
+<ol>
+    <li><h4>Displaying the Object Properties by name</h4></li>
+    <p id = "demo"></p><br>
+    <li><h4>Displaying the Object Properties in a Loop</h4></li>
+    <p id = "demo1"></p><br>
+    <li><h4>Displaying the Object using Object.values()</h4></li>
+    <p id = "demo2"></p><br>
+    <li><h4>Displaying the Object using JSON.stringify()</h4></li>
+    <p id = "demo3"></p><br>
+</ol>
+<script>
+            var person={firstName:"john", lastName:"Doe", age:40, city:"New-york"};
+            //Displaying the Object Properties by name
+            document.getElementById("demo").innerHTML =
+            person.firstName + "," + person.lastName + "," + person.age + "," + person.city;
+
+            //Displaying the Object Properties in a Loop
+ 
+            var x, txt = "";
+            for (x in person) {
+            txt += person[x] + " ";
+            };
+            document.getElementById("demo1").innerHTML = txt;
+
+            //Using Object.values()
+            var myArray = Object.values(person);
+            document.getElementById("demo2").innerHTML = myArray;
+            //Using JSON.stringify()
+            var myString = JSON.stringify(person);
+            document.getElementById("demo3").innerHTML = myString;
+
+</script>
+</body>
+</html> 
